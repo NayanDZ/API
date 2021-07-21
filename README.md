@@ -65,5 +65,12 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
    - Force content-type for response. If you return application/json content then your content-type response is application/json.
    - Don't return sensitive: Credentials, Passwords, Server IP, Internal Path, security tokens and Users PAN or BANK details.
    - Return the proper status code according to the API output.
-     - HTTP defines the status code in every response in REST application do not use only 200 for success and 404 for error, there is a list of codes defined for HTTP using of these in REST API is enforced.  
+     - HTTP defines the status code in every response in REST application do not use only 200 for success and 404 for error, there is a list of codes defined for HTTP using of these in REST API is enforced.
+       - 201 Created – Resource created.
+       - 202 Accepted – Accepted for processing.
+       - 400 Bad Request – Malformed request having a message body format error.
+       - 401 Unauthorized – Wrong or no Authentication.
+       - 403 Forbidden – Authentication succeeded but the user doesn’t have permission to access the resource
+       - 405 Method Not Allowed – Unexpected HTTP method. 
+
 
