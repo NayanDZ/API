@@ -52,16 +52,28 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
 
 1. Authentication
 2. Data Encoding
-3. Access
-4. API Request (Input)
-5. Cryptography & Data Security
+   - JSON encoding preferred for the user-supplied data to prevent the arbitrary remote code execution and other attack types this can be done by using the JSON serializer.
+   - XML encoding is another type of mechanism used to check the XML content sent to the browser is parse-able and does not contain XML injection. 
+
+
+3. Cryptography & Data Security
    - Use HTTPS on server side to avoid MITM (Man in the Middle Attack).
    - Use HSTS header with SSL to avoid SSL Strip attack.
    - The TLS is properly implemented to avoid the network level attacks.
    - Web application must be secured with encryption methodologies in storing and accessing the data.
    - Limit requests (Throttling) to avoid DDoS / brute-force attacks.
 
-7. Processing
+4. API Request (Input)
+   - Use the proper HTTP method according to the operation: GET (read), POST (create), PUT/PATCH (replace/update), and DELETE (to delete a record), and respond with 405 Method Not Allowed if the requested method isn't appropriate for the requested resource.
+   - Validate content-type on request Accept header (Content Negotiation) to allow only your supported format (e.g. application/xml, application/json, etc.) and respond with 406 Not Acceptable response if not matched.
+   - Validate content-type of posted data as you accept (e.g. application/x-www-form-urlencoded, multipart/form-data, application/json, etc.).
+   - Validate user input to avoid common vulnerabilities (e.g. XSS, SQL-Injection, Remote Code Execution, etc.).
+   - Don't use any sensitive data (credentials, Passwords, security tokens, or API keys) in the URL, but use standard Authorization header.
+   - Use an API Gateway service to enable caching, Rate Limit policies (e.g. Quota, Spike Arrest, or Concurrent Rate Limit) and deploy APIs resources dynamically.
+   - Using of Secure parsing methodologies for the XML based inputs in the application to avoid the attacks like XML External Entity injection.
+   - While using HTTP Methods POST and PUT validate the content type of the request on the server side.
+
+5. Processing
    - Protect all the endpoints behind authentication to avoid broken authentication process.
    - User own resource ID should be avoided. Use /me/orders instead of /user/654321/orders.
    - Don't auto-increment ID’s. Use UUID instead.
@@ -71,7 +83,7 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
    - Dealing with huge amount of data, use Workers and Queues to process as much as possible in background and return response fast to avoid HTTP Blocking.
    - Do not forget to turn the DEBUG mode OFF.
 
-8. API Response (Output)
+6. API Response (Output)
    - Set " X-Frame-Options: DENY " header
    - Set " X-Content-Type-Options: nosniff " header
    - Set " Content-Security-Policy: default-src 'none' " header
