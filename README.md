@@ -48,5 +48,22 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
    - Postman
    - Burp Suite
 
+## API security best practices
 
+1. Authentication
+2. Data Encoding
+3. Access
+4. API Request (Input)
+5. Cryptography
+6. Processing
+7. API Response (Output)
+   - Set " X-Frame-Options: DENY " header
+   - Set " X-Content-Type-Options: nosniff " header
+   - Set " Content-Security-Policy: default-src 'none' " header
+   - Remove Fingerprinting headers:
+     - X-Powered-By , X-AspNet-Version, Server, etc.
+   - Force content-type for response. If you return application/json content then your content-type response is application/json.
+   - Don't return sensitive: Credentials, Passwords, Server IP, Internal Path, security tokens and Users PAN or BANK details.
+   - Return the proper status code according to the API output.
+     - HTTP defines the status code in every response in REST application do not use only 200 for success and 404 for error, there is a list of codes defined for HTTP using of these in REST API is enforced.  
 
