@@ -54,8 +54,14 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
 2. Data Encoding
 3. Access
 4. API Request (Input)
-5. Cryptography
-6. Processing
+5. Cryptography & Data Security
+   - Use HTTPS on server side to avoid MITM (Man in the Middle Attack).
+   - Use HSTS header with SSL to avoid SSL Strip attack.
+   - The TLS is properly implemented to avoid the network level attacks.
+   - Web application must be secured with encryption methodologies in storing and accessing the data.
+   - Limit requests (Throttling) to avoid DDoS / brute-force attacks.
+
+7. Processing
    - Protect all the endpoints behind authentication to avoid broken authentication process.
    - User own resource ID should be avoided. Use /me/orders instead of /user/654321/orders.
    - Don't auto-increment ID’s. Use UUID instead.
