@@ -56,7 +56,16 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
 4. API Request (Input)
 5. Cryptography
 6. Processing
-7. API Response (Output)
+   - Protect all the endpoints behind authentication to avoid broken authentication process.
+   - User own resource ID should be avoided. Use /me/orders instead of /user/654321/orders.
+   - Don't auto-increment ID’s. Use UUID instead.
+   - If you are parsing XML files, make sure entity parsing is not enabled to avoid XXE attack.
+   - If you are parsing XML files, make sure entity expansion is not enabled to avoid Billion Laughs/XML bomb via exponential entity expansion attack.
+   - Use a CDN for file uploads.
+   - Dealing with huge amount of data, use Workers and Queues to process as much as possible in background and return response fast to avoid HTTP Blocking.
+   - Do not forget to turn the DEBUG mode OFF.
+
+8. API Response (Output)
    - Set " X-Frame-Options: DENY " header
    - Set " X-Content-Type-Options: nosniff " header
    - Set " Content-Security-Policy: default-src 'none' " header
