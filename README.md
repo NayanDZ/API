@@ -56,21 +56,19 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
        - [Basic Authentication](https://roadmap.sh/guides/basic-authentication.png)
        - [Session Based Authentication](https://roadmap.sh/guides/session-authentication.png)
        - [Token Based Authentication](https://roadmap.sh/guides/token-authentication.png)
-          - [JWT-JSON Web Token](https://roadmap.sh/guides/jwt-authentication.png)
-          - [OAuth- Open Authentication](https://roadmap.sh/guides/oauth.png)
-          - [SSO -- Single Sign-On](https://roadmap.sh/guides/sso.png)
+         - [JWT-JSON Web Token](https://roadmap.sh/guides/jwt-authentication.png)
+           > Use a random complicated key (JWT Secret) to make brute forcing the token very hard.
+           > Don't extract the algorithm from the header. Force the algorithm in the backend (HS256 or RS256).
+           > Make token expiration (TTL, RTTL) as short as possible.
+         - [OAuth- Open Authentication](https://roadmap.sh/guides/oauth.png)
+           > Always validate redirect_uri server-side to allow only whitelisted URLs.
+           > Always try to exchange for code and not tokens (don't allow response_type=token).
+           > Use state parameter with a random hash to prevent CSRF on the OAuth authentication process.
+         - [SSO -- Single Sign-On](https://roadmap.sh/guides/sso.png)
+         
    - Don't reinvent the wheel in Authentication, token generation, password storage. Use the standards.
    - Use Max Retry and jail features in Login.
-   - Use encryption on all sensitive data.
-
-   - JWT (JSON Web Token) 
-     - Use a random complicated key (JWT Secret) to make brute forcing the token very hard.
-     - Don't extract the algorithm from the header. Force the algorithm in the backend (HS256 or RS256).
-     -	Make token expiration (TTL, RTTL) as short as possible. 
-   - OAuth
-     - Always validate redirect_uri server-side to allow only whitelisted URLs.
-     - Always try to exchange for code and not tokens (don't allow response_type=token).
-     - Use state parameter with a random hash to prevent CSRF on the OAuth authentication process.
+   - Use encryption on all sensitive data.    
 
 ***2. Data Encoding***
    - JSON encoding preferred for the user-supplied data to prevent the arbitrary remote code execution and other attack types this can be done by using the JSON serializer.
