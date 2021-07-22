@@ -58,7 +58,9 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
        - [Token Based Authentication](https://roadmap.sh/guides/token-authentication.png)
          - [JWT-JSON Web Token](https://roadmap.sh/guides/jwt-authentication.png)
            > Use a random complicated key (JWT Secret) to make brute forcing the token very hard.
+           
            > Don't extract the algorithm from the header. Force the algorithm in the backend (HS256 or RS256).
+           
            > Make token expiration (TTL, RTTL) as short as possible.
          - [OAuth- Open Authentication](https://roadmap.sh/guides/oauth.png)
            > Always validate redirect_uri server-side to allow only whitelisted URLs.
