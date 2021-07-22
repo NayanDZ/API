@@ -17,7 +17,7 @@
 
 Majorly two types of services used in the development environment REST and SOAP.
 
-1. ***SOAP (Simple Object Access Protocol)*** is an XML-based messaging protocol for exchanging information among computers. 
+***1. SOAP (Simple Object Access Protocol)*** is an XML-based messaging protocol for exchanging information among computers. 
 SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and SAML tokens to deal with transactional messaging security considerations.
 - Web services depends on:
   - XML: to tag the data (as markup and syntax)
@@ -38,7 +38,7 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
   - Host Cipher Support/ Valid Certificate/ Protocol Support
   - Hashing Algorithm Support
 
-2. ***REST (Representational State Transfer)*** uses HTTP to obtain data and perform operations on remote computer systems. It supports SSL authentication and HTTPS to achieve secure communication.
+***2. REST (Representational State Transfer)*** uses HTTP to obtain data and perform operations on remote computer systems. It supports SSL authentication and HTTPS to achieve secure communication.
 
    REST uses the JSON standard
 
