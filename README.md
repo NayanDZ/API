@@ -52,7 +52,7 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
 
 ***1. Authentication***
    - Don't use Basic Auth. Use standard authentication instead (e.g. JWT, OAuth).
-     - Auth Strategies
+    - **Auth Strategies**
        - [Basic Authentication](https://roadmap.sh/guides/basic-authentication.png)
        - [Session Based Authentication](https://roadmap.sh/guides/session-authentication.png)
        - [Token Based Authentication](https://roadmap.sh/guides/token-authentication.png)
