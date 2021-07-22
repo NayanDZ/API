@@ -1,11 +1,11 @@
 # 4-API/Web Services
 
-## API
+## API (Application Programming Interface)
 
-- Application Programming Interface (API) is a software intermediary that allows your applications to communicate with one another. 
-It provides routines, protocols, and tools for developers building software applications, while enabling the extraction and sharing of data in an accessible manner.
+- API is a software intermediary that allows your applications to communicate with one another. 
+- It provides routines, protocols, and tools for developers to building software applications, while enabling the extraction and sharing of data in an accessible manner.
 
-- Content formats of API is JSON, XML, plain text, JPEG, PDF etc.
+- Content formats of API: JSON, XML, plain text, JPEG, PDF etc.
 
 ## Web Services     
 
@@ -13,7 +13,7 @@ It provides routines, protocols, and tools for developers building software appl
 - The benefit of web services are since all of its communication is in XML, they are not restricted to any operating system or programming languages
 - Web services are built on top of open standards such as XML, Java, HTTP, TCP/IP.
  
-## API vs Web Services 
+## REST vs SOAP 
 
 Majorly two types of services used in the development environment REST and SOAP.
 
@@ -56,9 +56,9 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
        - [Basic Authentication](https://roadmap.sh/guides/basic-authentication.png)
        - [Session Based Authentication](https://roadmap.sh/guides/session-authentication.png)
        - [Token Based Authentication](https://roadmap.sh/guides/token-authentication.png)
-       - [JWT-JSON Web Token](https://roadmap.sh/guides/jwt-authentication.png)
-       - [OAuth- Open Authentication](https://roadmap.sh/guides/oauth.png)
-       - [SSO -- Single Sign-On](https://roadmap.sh/guides/sso.png)
+          - [JWT-JSON Web Token](https://roadmap.sh/guides/jwt-authentication.png)
+          - [OAuth- Open Authentication](https://roadmap.sh/guides/oauth.png)
+          - [SSO -- Single Sign-On](https://roadmap.sh/guides/sso.png)
    - Don't reinvent the wheel in Authentication, token generation, password storage. Use the standards.
    - Use Max Retry and jail features in Login.
    - Use encryption on all sensitive data.
