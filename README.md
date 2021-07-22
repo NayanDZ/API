@@ -17,7 +17,7 @@
 
 Majorly two types of services used in the development environment REST and SOAP.
 
-1. SOAP (Simple Object Access Protocol) is an XML-based messaging protocol for exchanging information among computers. 
+1. ***SOAP (Simple Object Access Protocol)*** is an XML-based messaging protocol for exchanging information among computers. 
 SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and SAML tokens to deal with transactional messaging security considerations.
 - Web services depends on:
   - XML: to tag the data (as markup and syntax)
@@ -38,7 +38,7 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
   - Host Cipher Support/ Valid Certificate/ Protocol Support
   - Hashing Algorithm Support
 
-2. REST (Representational State Transfer) uses HTTP to obtain data and perform operations on remote computer systems. It supports SSL authentication and HTTPS to achieve secure communication.
+2. ***REST (Representational State Transfer)*** uses HTTP to obtain data and perform operations on remote computer systems. It supports SSL authentication and HTTPS to achieve secure communication.
 
    REST uses the JSON standard
 
@@ -50,15 +50,15 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
 
 ## API security best practices
 
-1. Authentication
+***1. Authentication***
    - Don't use Basic Auth. Use standard authentication instead (e.g. JWT, OAuth).
      - Auth Strategies
        - [Basic Authentication](https://roadmap.sh/guides/basic-authentication.png)
        - [Session Based Authentication](https://roadmap.sh/guides/session-authentication.png)
        - [Token Based Authentication](https://roadmap.sh/guides/token-authentication.png)
-          - [JWT-JSON Web Token](https://roadmap.sh/guides/jwt-authentication.png)
-          - [OAuth- Open Authentication](https://roadmap.sh/guides/oauth.png)
-          - [SSO -- Single Sign-On](https://roadmap.sh/guides/sso.png)
+         - [JWT-JSON Web Token](https://roadmap.sh/guides/jwt-authentication.png)
+         - [OAuth- Open Authentication](https://roadmap.sh/guides/oauth.png)
+         - [SSO -- Single Sign-On](https://roadmap.sh/guides/sso.png)
    - Don't reinvent the wheel in Authentication, token generation, password storage. Use the standards.
    - Use Max Retry and jail features in Login.
    - Use encryption on all sensitive data.
@@ -72,19 +72,19 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
      - Always try to exchange for code and not tokens (don't allow response_type=token).
      - Use state parameter with a random hash to prevent CSRF on the OAuth authentication process.
 
-3. Data Encoding
+***2. Data Encoding***
    - JSON encoding preferred for the user-supplied data to prevent the arbitrary remote code execution and other attack types this can be done by using the JSON serializer.
    - XML encoding is another type of mechanism used to check the XML content sent to the browser is parse-able and does not contain XML injection. 
 
 
-3. Cryptography & Data Security
+***3. Cryptography & Data Security***
    - Use HTTPS on server side to avoid MITM (Man in the Middle Attack).
    - Use HSTS header with SSL to avoid SSL Strip attack.
    - The TLS is properly implemented to avoid the network level attacks.
    - Web application must be secured with encryption methodologies in storing and accessing the data.
    - Limit requests (Throttling) to avoid DDoS / brute-force attacks.
 
-4. API Request (Input)
+***4. API Request (Input)***
    - Use the proper HTTP method according to the operation: GET (read), POST (create), PUT/PATCH (replace/update), and DELETE (to delete a record), and respond with 405 Method Not Allowed if the requested method isn't appropriate for the requested resource.
    - Validate content-type on request Accept header (Content Negotiation) to allow only your supported format (e.g. application/xml, application/json, etc.) and respond with 406 Not Acceptable response if not matched.
    - Validate content-type of posted data as you accept (e.g. application/x-www-form-urlencoded, multipart/form-data, application/json, etc.).
@@ -94,7 +94,7 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
    - Using of Secure parsing methodologies for the XML based inputs in the application to avoid the attacks like XML External Entity injection.
    - While using HTTP Methods POST and PUT validate the content type of the request on the server side.
 
-5. Processing
+***5. Processing***
    - Protect all the endpoints behind authentication to avoid broken authentication process.
    - User own resource ID should be avoided. Use /me/orders instead of /user/654321/orders.
    - Don't auto-increment ID’s. Use UUID instead.
@@ -104,7 +104,7 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
    - Dealing with huge amount of data, use Workers and Queues to process as much as possible in background and return response fast to avoid HTTP Blocking.
    - Do not forget to turn the DEBUG mode OFF.
 
-6. API Response (Output)
+***6. API Response (Output)***
    - Set " X-Frame-Options: DENY " header
    - Set " X-Content-Type-Options: nosniff " header
    - Set " Content-Security-Policy: default-src 'none' " header
