@@ -48,6 +48,12 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
    - Postman
    - Burp Suite
 
+## [OWASP API Security Top-10 Vulnerabilities (2019)](https://github.com/OWASP/API-Security/blob/master/2019/en/dist/owasp-api-security-top-10.pdf)
+
+* https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm
+
+* https://application.security/free/owasp-top-10-API
+
 ## API security best practices
 
 ***1. Authentication***
