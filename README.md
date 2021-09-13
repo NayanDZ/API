@@ -43,7 +43,7 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
    REST uses the JSON standard
 
 
-## Tools for performing VAPT
+## ⚙️ Tools for performing VAPT
    - SoapUI
    - Postman
    - Burp Suite
