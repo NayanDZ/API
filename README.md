@@ -127,4 +127,6 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
        - 403 Forbidden – Authentication succeeded but the user doesn’t have permission to access the resource
        - 405 Method Not Allowed – Unexpected HTTP method. 
 
+## Other Useful Links
+[31 Tips — API Security & Pentesting](https://github.com/inonshk/31-days-of-API-Security-Tips)
 
