@@ -26,8 +26,7 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
   - SOAP(Simple Object Access Protocol): to transfer a message
   - WSDL(Web Services Description Language): to describe the availability of service
   - UDDI (Universal Description, Discovery and Integration): Registry service is a Web service that manages information about service providers, service   implementations, and service metadata
-- Test cases to find in web services:
-  - Fuzzing
+- Test cases to find in web services (Threats):
   - XSS /SQLi/ Malformed XML
   - File Upload
   - Xpath Injection
@@ -39,6 +38,7 @@ SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and S
   - Session timeout
   - Host Cipher Support/ Valid Certificate/ Protocol Support
   - Hashing Algorithm Support
+  - Fuzzing
 
 ***2. REST (Representational State Transfer)*** uses HTTP to obtain data and perform operations on remote computer systems. It supports SSL authentication and HTTPS to achieve secure communication.
 
