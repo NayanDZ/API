@@ -7,6 +7,7 @@ https://application.security/free/owasp-top-10-API
 ## API (Application Programming Interface)
 
 - API is a software intermediary that allows your applications to communicate with one another. 
+- API: we have URI(Uniform Resource Identifier) by using we send request which is GET or POST.
 - It provides routines, protocols, and tools for developers to building software applications, while enabling the extraction and sharing of data in an accessible manner.
 
 - Content formats of API: JSON, XML, plain text, JPEG, PDF etc.
@@ -14,7 +15,10 @@ https://application.security/free/owasp-top-10-API
 ## Web Services     
 
 - A web service is software composed of standardized XML messaging system.
-- The benefit of web services are since all of its communication is in XML, they are not restricted to any operating system or programming languages
+- SOAP: We have to send WSDL which is in XML format.
+- The benefit of web services are since all of its communication is in XML.
+- Not restricted to any operating system or programming languages.
+
 - Web services are built on top of open standards such as XML, Java, HTTP, TCP/IP.
  
 ## REST vs SOAP 
