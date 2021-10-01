@@ -19,7 +19,7 @@ https://application.security/free/owasp-top-10-API
  
 ## REST vs SOAP 
 
-Majorly two types of services used in the development environment REST and SOAP.
+Majorly two types of services used in the development environment **REST** and **SOAP**.
 
 ***1. SOAP (Simple Object Access Protocol)*** is an XML-based messaging protocol for exchanging information among computers. 
 SOAP’s built-in WS-Security standard uses XML Encryption, XML Signature, and SAML tokens to deal with transactional messaging security considerations.
