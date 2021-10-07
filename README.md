@@ -2,8 +2,6 @@
 ### [API Security Top 10 2019](https://owasp.org/www-project-api-security/) |~|  📘[(2019 pdf)](https://github.com/OWASP/API-Security/blob/master/2019/en/dist/owasp-api-security-top-10.pdf)
  https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm
 
-https://application.security/free/owasp-top-10-API
-
 ## API (Application Programming Interface)
 
 - API is a software intermediary that allows your applications to communicate with one another. 
