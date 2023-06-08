@@ -1,5 +1,5 @@
 # API/Web Services Security Testing
-### [API Security Top 10 2019](https://owasp.org/www-project-api-security/) |~|  📘[(2019 pdf)](https://github.com/OWASP/API-Security/blob/master/2019/en/dist/owasp-api-security-top-10.pdf)
+### [API Security Top 10 2023](https://owasp.org/www-project-api-security/) 
  https://apisecurity.io/encyclopedia/content/owasp/owasp-api-security-top-10.htm
 
 ## API (Application Programming Interface)
